@@ -1,0 +1,13 @@
+{
+  "name": "ts-workspaces",
+  "workspaces": [
+    "services/**",
+    "lib/**"
+  ],
+  "private": true,
+  "scripts": {
+    "build": "yarn workspace @tsw/foobar run build",
+    "run": "node dist/index.js",
+    "clean": "rm -rf dist && find . -type d -name 'node_modules' -exec rm -rf '{}' \\;"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "es5",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "composite": true,
+    "declaration": true
+  },
+  "references": [
+    {
+      "path": "./lib/logger"
+    },
+    {
+      "path": "./lib/common"
+    }
+  ]
+}
