@@ -12,10 +12,10 @@
   },
   "references": [
     {
-      "path": "./lib/logger"
+      "path": "./packages/lib/logger"
     },
     {
-      "path": "./lib/common"
+      "path": "./packages/lib/common"
     }
   ]
 }

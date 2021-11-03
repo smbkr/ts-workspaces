@@ -1,13 +1,15 @@
 {
   "name": "ts-workspaces",
   "workspaces": [
-    "services/**",
-    "lib/**"
+    "packages/**"
   ],
   "private": true,
   "scripts": {
     "build": "yarn workspace @tsw/foobar run build",
     "run": "node dist/index.js",
-    "clean": "rm -rf dist && find . -type d -name 'node_modules' -exec rm -rf '{}' \\;"
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
   }
 }
