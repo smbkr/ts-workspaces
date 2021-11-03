@@ -8,9 +8,10 @@
     "typescript": "^4.4.4"
   },
   "dependencies": {
-    "@tsw/logger": "*"
+    "@tsw/logger": "*",
+    "@tsw/common":  "*"
   },
   "scripts": {
-    "build": "node_modules/.bin/tsc"
+    "build": "tsc --build"
   }
 }

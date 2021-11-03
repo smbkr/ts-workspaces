@@ -1,21 +1,10 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "target": "es5",
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "composite": true,
-    "declaration": true
-  },
-  "references": [
-    {
-      "path": "./packages/lib/logger"
-    },
-    {
-      "path": "./packages/lib/common"
+    "baseUrl": "./packages",
+    "paths": {
+//      "@tsw/*": ["./$1/src/*"],
+      "@tsw/logger/*": ["logger/src/*"],
+      "@tsw/common/*": ["common/src/*"]
     }
-  ]
+  }
 }
