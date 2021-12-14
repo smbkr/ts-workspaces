@@ -96,3 +96,9 @@ like a pretend service, imports the logger and the string from common and logs t
 ### logger
 
 exports a logger function, should be importable everywhere
+
+## TODO
+
+make a new branch and get rid of lerna, see if we can manage the build process above with just yarn
+
+maybe try yarn 2?
