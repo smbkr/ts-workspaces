@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "build": "lerna run build --stream",
+    "test": "lerna run test --parallel",
     "start": "node packages/foobar/dist/index.js",
     "clean": "lerna clean -y && rm -rf node_modules && find . -type d -name 'dist' -exec rm -rf {} \\; && find . -type f -name '*.tsbuildinfo' -exec rm -f {} \\;"
   },

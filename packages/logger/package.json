@@ -6,5 +6,8 @@
   "private": true,
   "devDependencies": {
     "typescript": "^4.4.4"
+  },
+  "scripts": {
+    "test": "sleep 1"
   }
 }

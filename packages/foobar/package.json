@@ -12,6 +12,7 @@
     "@tsw/common":  "*"
   },
   "scripts": {
-    "build": "tsc --build"
+    "build": "tsc --build",
+    "test": "sleep 5"
   }
 }

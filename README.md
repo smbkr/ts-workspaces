@@ -13,6 +13,10 @@ or install globally `npm i -g lerna`
 `lerna run build --stream` sequential
 `lerna run test --parallel` self explanatory
 
+`lerna run` will run the corresponding script for each package, e.g. `lerna run test` looks for `test` script in
+package.json in each package. doesn't fail if the script doesn't exist, allows omitting `build` for example for libs
+that are not build to distribution but just included elsewhere
+
 ## Notes
 
 to use with yarn/workspaces
