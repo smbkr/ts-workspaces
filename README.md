@@ -63,7 +63,18 @@ publishing a new version unnecessarily for changes, such as fixing a README.md t
 
 ---
 
-```json
+## TypeScript
+
+tsconfig.json in the root defines the paths for packages we want to be able to import elsewhere, e.g. to allow service '
+foobar' to import the logger
+
+tsconfig-build.json is our base config (could have called it tsconfig-base.json or whatever. Not sure why I put build?).
+It is extended by each service's tsconfig, and defines the common config like target lib, module resolution options,
+etc.
+
+Each package's tsconfig is like the below:
+
+```
 {
   "extends: "../../tsconfig.build.json",
   "compilerOptions": {
@@ -76,8 +87,13 @@ publishing a new version unnecessarily for changes, such as fixing a README.md t
 }
 ```
 
-For each tsconfig, we have to declare the rootDir, outDir , include properties. They can’t be hoisted in the root config
-because they are resolved relative to the config they are in.
+For each package's tsconfig, we have to declare the rootDir, outDir and include properties. They can’t be hoisted in the
+root config because they are resolved relative to the config they are in.
+
+**TODO:**
+
+it would be better if we didn't need an explicit entry for every package in the root tsconfig.json so that packages just
+got detected automatically.
 
 ## packages
 
