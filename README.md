@@ -1,4 +1,9 @@
-# Lerna
+# README
+
+Useful reading:
+https://medium.com/ah-technology/a-guide-through-the-wild-wild-west-of-setting-up-a-mono-repo-with-typescript-lerna-and-yarn-ed6a1e5467a
+
+## Lerna
 
 ## Commands
 
@@ -28,44 +33,21 @@ to use with yarn/workspaces
 ```
 
 all workspaces/packages in `./packages/foo`
-subdirectories seem to work, e.g. /packages/lib/logger /packages/service/foobar
+subdirectories seem to work, e.g. `/packages/lib/logger`, `/packages/service/foobar`
 
-although it's easier if they are just in /packages/whatever, flat means less config
+although it's easier if they are just in `/packages/whatever`, flat means less config. maybe use naming
+conventions? `packages/foo-service`, `packages/bar-lib`?
 
-`npx lerna bootstrap` for initial install
+Then you can just use:
 
-then `lerna [whatever]` after
-
-https://medium.com/ah-technology/a-guide-through-the-wild-wild-west-of-setting-up-a-mono-repo-with-typescript-lerna-and-yarn-ed6a1e5467a
-
-command.version.ignoreChanges: an array of globs that won't be included in lerna changed/publish. Use this to prevent
-publishing a new version unnecessarily for changes, such as fixing a README.md typo
-
-```json
-{
+```
+// lerna.json
   "packages": [
     "packages/*"
   ],
-  "npmClientArgs": [
-    "--no-lockfile"
-  ],
-  "version": "independent",
-  "command": {
-    "version": {
-      "ignoreChanges": [
-        "*.md"
-      ],
-      "npmClient": "npm",
-      "message": "chore(release): publish"
-    },
-    "publish": {
-      "npmClient": "npm"
-    }
-  }
-}
 ```
 
----
+instead of each dir one by one
 
 ## TypeScript
 
