@@ -65,9 +65,7 @@ publishing a new version unnecessarily for changes, such as fixing a README.md t
 
 ```json
 {
-  "extends: "
-  ../../tsconfig.build.json
-  ",
+  "extends: "../../tsconfig.build.json",
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./dist"
