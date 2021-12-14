@@ -3,51 +3,16 @@
 Useful reading:
 https://medium.com/ah-technology/a-guide-through-the-wild-wild-west-of-setting-up-a-mono-repo-with-typescript-lerna-and-yarn-ed6a1e5467a
 
-## Lerna
+## Yarn 2
 
-## Commands
-
-`npx lerna init` start a new project or convert existing. can then just use `lerna` once it's in /node_modules/.bin
-
-or install globally `npm i -g lerna`
-
-`lerna bootstrap` - install dependencies and link local dependencies
-`lerna clean` - delete dependencies
-`lerna create` - add new module
-
-`lerna run build --stream` sequential
-`lerna run test --parallel` self explanatory
-
-`lerna run` will run the corresponding script for each package, e.g. `lerna run test` looks for `test` script in
-package.json in each package. doesn't fail if the script doesn't exist, allows omitting `build` for example for libs
-that are not build to distribution but just included elsewhere
-
-## Notes
-
-to use with yarn/workspaces
-
+https://yarnpkg.com/getting-started/install
 ```
-// lerna.json
-+  "npmClient": "yarn",
-+  "useWorkspaces": true
+nvm use
+corepack enable
+yarn init -2
+yarn set version stable
 ```
 
-all workspaces/packages in `./packages/foo`
-subdirectories seem to work, e.g. `/packages/lib/logger`, `/packages/service/foobar`
-
-although it's easier if they are just in `/packages/whatever`, flat means less config. maybe use naming
-conventions? `packages/foo-service`, `packages/bar-lib`?
-
-Then you can just use:
-
-```
-// lerna.json
-  "packages": [
-    "packages/*"
-  ],
-```
-
-instead of each dir one by one
 
 ## TypeScript
 
